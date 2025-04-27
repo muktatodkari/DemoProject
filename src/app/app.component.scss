@@ -1,0 +1,28 @@
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    
+}
+
+.border {
+border: 1px solid black;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse; /* merge double borders */
+  }
+  th, td {
+    padding: 8px; /* spacing inside cells */
+    text-align: left;
+  }
+  .inputField{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .padding{
+    margin-bottom: 12px;
+  }
