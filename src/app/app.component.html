@@ -1,27 +1,34 @@
-<div class="align-center">
+<div class="align-center" bo>
   <h3>Fill Student Details</h3>
-  <div class="inputField padding" >
-    <span class="padding"> firstName:
-      <input placeholder="enter firstName" name="firstName" [(ngModel)]="firstName" type="text" />
-    </span>
-    <span class="padding"> lastName:
-    <input placeholder="enter the lastName" name="lastName" [(ngModel)]="lastName" type="text" />
-    </span>
-    <span class="padding"> Email:
-    <input placeholder="enter the Email" name="Email" [(ngModel)]="email" type="email" />
-    </span>
-  </div>
-  <div>
-    <button  (click)="submit()" *ngIf="!updateValue">
-      submit
-    </button>
-    <button  (click)="updatedValue()" *ngIf="updateValue">
-      update
-    </button>
+  <div class="container">
+    <div class="inputField padding " >
+      <div class="padding">
+        <span> First Name: </span>
+          <input placeholder="Enter first name" name="firstName" [(ngModel)]="firstName" type="text" />
+      </div>
+      
+      <div class="padding">
+        <span> Last Name: </span>
+        <input placeholder="Enter the last name" name="lastName" [(ngModel)]="lastName" type="text" class="lastNameInput"/>
+      </div>
+    
+      <div class="padding">
+        <span > Email: </span>
+        <input placeholder="Enter the email" name="Email" [(ngModel)]="email" type="email" class="emailInput"/>
+      </div>
+    </div>
+    <div class="align-center">
+      <button  (click)="submit()" *ngIf="!updateValue" class="submit">
+        submit
+      </button>
+      <button  (click)="updatedValue()" *ngIf="updateValue">
+        update
+      </button>
+    </div>
   </div>
 
 </div>
-<div>
+<div class="align-center">
   <table>
     <thead>
       <tr>
@@ -37,7 +44,7 @@
         <td>{{data?.lastName}}</td>
         <td>{{data?.email}}</td>
         <td>
-          <button (click)="update(data.id)">update</button>
+          <button (click)="update(data.id)"> update </button>
           <button (click)="deleteData(data.id)"> delete </button>
         </td>
       </tr>
